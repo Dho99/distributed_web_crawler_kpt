@@ -1,0 +1,73 @@
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Node / frontend
+# ---------------------------------------------------------------------------
+node_modules/
+web/dist/
+web/.vite/
+*.tsbuildinfo
+
+# ---------------------------------------------------------------------------
+# Runtime data, database and state (never commit)
+# ---------------------------------------------------------------------------
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+exports/
+logs/
+*.log
+.crawlmesh-agent/
+
+# ---------------------------------------------------------------------------
+# Generated build artefacts
+# master/app/static is produced by: cd web && npm run build
+# docs/*.html guide is produced by: tools/guides/build_html.py
+# ---------------------------------------------------------------------------
+master/app/static/
+docs/CrawlMesh-Panduan-Lengkap.html
+*.pdf
+*.zip
+
+# Third-party asset fetched on demand by tools/guides/build_html.py
+tools/guides/assets/*.js
+!tools/guides/assets/.gitkeep
+
+# ---------------------------------------------------------------------------
+# Secrets / environment
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------------------------------------------------------------------------
+# Editor / OS noise
+# ---------------------------------------------------------------------------
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------------------------------------------------------------------------
+# Test / browser automation artefacts
+# ---------------------------------------------------------------------------
+.playwright/
+playwright-report/
+test-results/
