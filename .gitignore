@@ -39,7 +39,6 @@ logs/
 # docs/*.html guide is produced by: tools/guides/build_html.py
 # ---------------------------------------------------------------------------
 master/app/static/
-docs/CrawlMesh-Panduan-Lengkap.html
 *.pdf
 *.zip
 
