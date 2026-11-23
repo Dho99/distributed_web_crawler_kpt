@@ -434,13 +434,13 @@ Data Master diambil dari record cluster pada database. Spesifikasi Worker belum 
 
 | Komponen | Konfigurasi aktual |
 |---|---|
-| Bahasa | Python 3.13.14 |
-| Master framework | FastAPI 0.121.1, Uvicorn 0.38.0 |
-| Database | SQLite dengan WAL melalui aiosqlite 0.21.0 |
+| Bahasa | Python 3.15.2 |
+| Master framework | FastAPI 0.165.0, Uvicorn 0.54.0 |
+| Database | SQLite dengan WAL melalui aiosqlite 0.22.1 |
 | HTTP client | httpx 0.28.1 |
-| Monitoring | psutil 7.1.3 |
-| Validasi model | Pydantic 2.12.4 |
-| WebSocket | websockets 15.0.1 |
+| Monitoring | psutil 7.2.2 |
+| Validasi model | Pydantic 2.14.4 |
+| WebSocket | websockets 17.4 |
 | GUI | React 18.3.1, TypeScript 5.7.2, Vite 6.0.5, Tailwind CSS 4.0 |
 | Grafik | Recharts 2.15.0 |
 | Worker multiprocessing | ProcessPoolExecutor dengan context spawn |

@@ -33,7 +33,7 @@ Dokumen ini mencatat data yang belum tersedia saat draft dibuat. Placeholder pad
 | Master OS | Windows 11 | database |
 | Master CPU | 16 core | database |
 | Master RAM | 21.144.231.936 byte | database |
-| Python | 3.13.14 | runtime |
+| Python | 3.15.2 | runtime |
 | Jumlah screenshot UI | 14 gambar | `docs/guides/img/` |
 | Jumlah experiment di DB | 0 | `data/crawlmesh.db` |
 

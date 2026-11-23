@@ -54,6 +54,8 @@ Verifikasi dari worker: `Test-NetConnection <master-ip> -Port 8000` (PowerShell)
 
 ## 3. Instalasi aplikasi
 
+Prasyarat: Python 3.15+ di semua mesin.
+
 Di semua mesin (repo + venv):
 
 ```powershell

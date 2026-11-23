@@ -3,7 +3,7 @@
 Dokumen ini menjelaskan cara menjalankan CrawlMesh pada satu komputer maupun pada 10 komputer
 terpisah, mengoperasikan seluruh fitur lewat GUI, dan mengambil data benchmark untuk laporan.
 
-Semua langkah di bawah sudah diuji pada Windows 11 dengan Python 3.13 dan Node.js 24. Perintah
+Semua langkah di bawah sudah diuji pada Windows 11 dengan Python 3.15 dan Node.js 24. Perintah
 Linux disertakan pada bagian deployment.
 
 ---
@@ -29,7 +29,7 @@ Cocok untuk mencoba aplikasi sebelum menyiapkan 10 mesin.
 
 ### 2.1 Prasyarat
 
-- Python 3.12 atau lebih baru
+- Python 3.15 atau lebih baru
 - Node.js 20 atau lebih baru
 - Windows 10/11, macOS, atau Linux
 - Port `8000/tcp` bebas
@@ -569,7 +569,7 @@ Catat jumlah task terdampak, task yang di-requeue, worker pengganti, dan waktu p
 | Speedup < 1 | worker masih di mesin yang sama | jalankan worker di mesin terpisah dan ulangi |
 | Eksperimen gagal "tidak menghasilkan halaman" | job selesai sebelum worker siap | pastikan worker aktif, ulangi run |
 
-Pada Windows, proses `python.exe` dapat memiliki proses anak `python3.13.exe`. Saat membersihkan
+Pada Windows, proses `python.exe` dapat memiliki proses anak `python3.15.exe`. Saat membersihkan
 agent, hentikan keduanya.
 
 ---

@@ -33,7 +33,7 @@ Laporan_Proyek_CrawlMesh_Draft.docx
 
 ## Build
 
-Prasyarat: Python 3.12+, Microsoft Word (untuk update TOC dan export PDF).
+Prasyarat: Python 3.15+, Microsoft Word (untuk update TOC dan export PDF).
 
 ```powershell
 # tool laporan (sudah diinstal di .venv proyek)

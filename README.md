@@ -16,7 +16,7 @@ dan Performance Lab dengan experiment history otomatis.
 
 ## Quick start
 
-Prasyarat: Python 3.12+, Node.js 20+, dua mesin di LAN yang sama untuk uji distributed.
+Prasyarat: Python 3.15+, Node.js 20+, dua mesin di LAN yang sama untuk uji distributed.
 
 ```powershell
 # 1) dependencies
@@ -233,7 +233,7 @@ Line ending dinormalisasi lewat `.gitattributes` (LF untuk kode, CRLF untuk Powe
 | GUI 503 | build frontend belum ada | `cd web && npm run build` |
 | Port 5599 dipakai proses lain | agent lama masih hidup | hentikan proses python agent sebelumnya |
 
-Catatan Windows: `.venv\Scripts\python.exe` dapat memunculkan proses `python3.13.exe` anak.
+Catatan Windows: `.venv\Scripts\python.exe` dapat memunculkan proses `python3.15.exe` anak.
 Hentikan keduanya saat membersihkan proses agent.
 
 ## Lisensi

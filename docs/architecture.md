@@ -134,8 +134,8 @@ Worker ──HTTP keluar──► Master
 | Container | Teknologi | Port | Tanggung jawab |
 |---|---|---|---|
 | Web GUI | React 18, TypeScript, Vite, Tailwind v4, TanStack Query, Recharts | — (di-serve Master) | Kendali cluster, monitoring, benchmark |
-| Master | Python 3.13, FastAPI, uvicorn, aiosqlite | 8000/TCP | API, scheduler, fault detector, WS, bench site |
-| Worker Agent | Python 3.13, FastAPI, httpx, psutil | 8010/TCP | Registrasi, heartbeat, fetch, parsing, metrik |
+| Master | Python 3.15, FastAPI, uvicorn, aiosqlite | 8000/TCP | API, scheduler, fault detector, WS, bench site |
+| Worker Agent | Python 3.15, FastAPI, httpx, psutil | 8010/TCP | Registrasi, heartbeat, fetch, parsing, metrik |
 | Discovery | UDP broadcast | 5599/UDP | Penemuan agent di LAN |
 | Storage | SQLite WAL | file | State cluster, frontier, task, hasil, eksperimen |
 | Bench site | FastAPI route | 8000/TCP | Halaman statis deterministik untuk benchmark |
@@ -944,7 +944,7 @@ Verifikasi dokumen ini tetap akurat:
 
 ```powershell
 # daftar route aktual
-.\.venv\Scripts\python.exe -c "import sys;sys.path.insert(0,'.');from master.app.main import app;print(len([r for r in app.routes if getattr(r,'path','').startswith('/api')]))"
+.\.venv\Scripts\python.exe -c "import sys;sys.path.insert(0,'.');from master.app.main import app;print(len([p for p in app.openapi()['paths'] if p.startswith('/api')]))"
 
 # daftar tabel
 .\.venv\Scripts\python.exe -c "import re,pathlib;print(len(re.findall(r'CREATE TABLE',pathlib.Path('master/app/db/schema.sql').read_text())))"

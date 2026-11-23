@@ -40,7 +40,7 @@ async def test_cluster_lifecycle(db: Database):
         cpu_cores=8,
         memory_total=16 * 1024**3,
         os_name="Linux",
-        python_version="3.12",
+        python_version="3.15.2",
         agent_version="0.1.0",
         pool_size=4,
         capacity=4,

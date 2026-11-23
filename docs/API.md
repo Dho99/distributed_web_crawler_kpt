@@ -78,7 +78,7 @@ Contoh node:
 ```json
 { "worker_id": "worker-fcm-loq-259b78", "hostname": "FCM-LOQ", "ip_address": "192.168.18.141",
   "port": 8010, "role": "worker", "status": "idle", "cpu_cores": 16, "memory_total": 21144231936,
-  "os_name": "Windows 11", "python_version": "3.13.14", "pool_size": 2, "capacity": 2,
+  "os_name": "Windows 11", "python_version": "3.15.2", "pool_size": 2, "capacity": 2,
   "cpu_usage": 13.7, "memory_usage": 72.1, "inflight": 0, "child_processes": 0,
   "throughput": 0.0, "last_heartbeat": "2026-11-19T13:58:27Z" }
 ```
@@ -94,7 +94,7 @@ Semua endpoint memerlukan `X-Cluster-Token`. Token salah → `401`; cluster belu
 ```json
 { "worker_id": "worker-fcm-loq-259b78", "hostname": "FCM-LOQ", "ip_address": "192.168.18.141",
   "port": 8010, "cpu_cores": 16, "memory_total": 21144231936, "os_name": "Windows 11",
-  "python_version": "3.13.14", "agent_version": "0.1.0", "pool_size": 4, "capacity": 4 }
+  "python_version": "3.15.2", "agent_version": "0.1.0", "pool_size": 4, "capacity": 4 }
 ```
 
 Balasan:

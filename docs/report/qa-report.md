@@ -1,7 +1,7 @@
 # QA Report — Draft Laporan CrawlMesh
 
-- DOCX: `Laporan_Proyek_CrawlMesh_Draft.docx` (1609.4 KB)
-- PDF: `Laporan_Proyek_CrawlMesh_Draft.pdf` (1315.0 KB)
+- DOCX: `Laporan_Proyek_CrawlMesh_Draft.docx` (1609.3 KB)
+- PDF: `Laporan_Proyek_CrawlMesh_Draft.pdf` (1312.1 KB)
 - Jumlah halaman PDF: 43
 
 ## Format halaman
