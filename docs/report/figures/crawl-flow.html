@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 28px; background: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif; }
+  .mermaid { text-align: center; }
+</style></head>
+<body>
+<pre class="mermaid">
+
+sequenceDiagram
+  autonumber
+  participant O as Operator
+  participant M as Master
+  participant W as Worker
+  O->>M: POST /api/jobs (seed, scope, budget)
+  M->>M: normalisasi + dedupe + frontier
+  M->>M: dekomposisi URL menjadi task
+  loop lease pull setiap 0.25 s
+    W->>M: POST /api/worker/lease
+    M-->>W: batch task
+  end
+  W->>W: fetch async + parse process pool
+  W->>M: POST /api/worker/tasks/{id}/result
+  M->>M: upsert result + enqueue link baru
+  M->>M: complete_if_done
+  M-->>O: event WebSocket
+
+</pre>
+<script src="file:///D:/projects/crawlmesh/tools/guides/assets/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose',
+  flowchart: { useMaxWidth: true, htmlLabels: true },
+  sequence: { useMaxWidth: true } });
+</script>
+</body></html>

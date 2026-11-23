@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 28px; background: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif; }
+  .mermaid { text-align: center; }
+</style></head>
+<body>
+<pre class="mermaid">
+
+flowchart TD
+  M["Master-01<br/>192.168.18.141:8000"]
+  M --- W1["Worker-01"]
+  M --- W2["Worker-02"]
+  M --- W3["Worker-03"]
+  W1 --- W4["Worker-04"]
+  W1 --- W5["Worker-05"]
+  W2 --- W6["Worker-06"]
+  W2 --- W7["Worker-07"]
+  W3 --- W8["Worker-08"]
+  W3 --- W9["Worker-09"]
+
+</pre>
+<script src="file:///D:/projects/crawlmesh/tools/guides/assets/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose',
+  flowchart: { useMaxWidth: true, htmlLabels: true },
+  sequence: { useMaxWidth: true } });
+</script>
+</body></html>

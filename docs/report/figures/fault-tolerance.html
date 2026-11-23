@@ -1,0 +1,32 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 28px; background: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif; }
+  .mermaid { text-align: center; }
+</style></head>
+<body>
+<pre class="mermaid">
+
+sequenceDiagram
+  participant M as Master
+  participant WA as Worker A
+  participant WB as Worker B
+  WA->>M: heartbeat
+  Note over WA: agent berhenti / jaringan putus
+  M->>M: offline monitor setiap 2 s
+  Note over M: tidak ada heartbeat > 15 s
+  M->>M: status Worker A = offline
+  M->>M: task leased/ running di-requeue
+  M-->>WB: lease task pengganti
+  WB->>M: result
+  M->>M: recovery time = t_selesai - t_terdeteksi
+
+</pre>
+<script src="file:///D:/projects/crawlmesh/tools/guides/assets/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose',
+  flowchart: { useMaxWidth: true, htmlLabels: true },
+  sequence: { useMaxWidth: true } });
+</script>
+</body></html>

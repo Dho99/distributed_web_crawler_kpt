@@ -1,0 +1,27 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 28px; background: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif; }
+  .mermaid { text-align: center; }
+</style></head>
+<body>
+<pre class="mermaid">
+
+flowchart TD
+  U["Operator / Browser<br/>GUI"] -->|"HTTP + WebSocket"| M["Master Node<br/>FastAPI + SQLite WAL"]
+  M -->|"HTTP lease pull"| W1["Worker 1<br/>Agent + Process Pool"]
+  M -->|"HTTP lease pull"| W2["Worker 2<br/>Agent + Process Pool"]
+  M -->|"HTTP lease pull"| W9["Worker 9<br/>Agent + Process Pool"]
+  W1 -->|"result + links"| M
+  W2 -->|"result + links"| M
+  W9 -->|"result + links"| M
+
+</pre>
+<script src="file:///D:/projects/crawlmesh/tools/guides/assets/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose',
+  flowchart: { useMaxWidth: true, htmlLabels: true },
+  sequence: { useMaxWidth: true } });
+</script>
+</body></html>
